@@ -13,7 +13,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
 
         body {
@@ -73,7 +73,7 @@
         }
 
         .menu a:hover {
-            color: var(--accent);
+            color: var(--accent-alt);
         }
 
         .menu a:after {
@@ -83,7 +83,7 @@
             height: 2px;
             bottom: 0;
             left: 0;
-            background-color: var(--accent);
+            background-color: var(--accent-alt);
             transition: width 0.3s;
         }
 
@@ -92,18 +92,15 @@
         }
 
         .active {
-            color: var(--accent) !important;
+            color: var(--accent-alt) !important;
         }
 
         .active:after {
             width: 100%;
-            background-color: var(--accent);
+            background-color: var(--accent-alt);
         }
 
         /* Content Sections */
-        main {
-            padding-top: 80px;
-        }
 
         section {
             padding: 4rem 2rem;
@@ -113,6 +110,7 @@
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.5s, transform 0.5s;
+            padding-top: 100px;
         }
 
         section.active {
@@ -140,7 +138,6 @@
 
         /* Home Section */
         #home {
-            display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 3rem;
@@ -185,6 +182,7 @@
             font-size: 1.1rem;
             margin-bottom: 2rem;
             max-width: 600px;
+            color: var(--accent);
         }
 
         .btn {
@@ -233,7 +231,7 @@
             cursor: pointer;
             transition: all 0.3s;
         }
-
+        
         .filter-btn:hover, .filter-btn.active {
             background-color: var(--forest-green);
             color: white;
@@ -269,14 +267,17 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s;
+            color: var(--accent);
         }
 
         .portfolio-item:hover .portfolio-image img {
             transform: scale(1.05);
+            color: var(--accent);
         }
 
         .portfolio-content {
             padding: 1.5rem;
+            color: var(--accent);
         }
 
         .portfolio-title {
@@ -312,6 +313,7 @@
 
         .about-text p {
             margin-bottom: 1.5rem;
+            color: var(--accent);
         }
 
         .skills {
@@ -337,6 +339,7 @@
             display: flex;
             justify-content: space-between;
             margin-bottom: 0.5rem;
+            color: var(--accent);
         }
 
         .skill-progress {
@@ -362,12 +365,15 @@
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
+            color: var(--accent);
         }
 
         .contact-item {
             display: flex;
             align-items: flex-start;
             gap: 1rem;
+            color: var(--accent);
+
         }
 
         .contact-icon {
@@ -385,6 +391,7 @@
         .contact-content h4 {
             color: var(--dark-green);
             margin-bottom: 0.5rem;
+            
         }
 
         .contact-form {
@@ -551,8 +558,11 @@
         /* Page Transitions */
         .page {
             display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .page.active {
             display: block;
+            opacity: 1;
         }
